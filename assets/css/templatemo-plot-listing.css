@@ -44,6 +44,28 @@ figure, header, nav, section, article, aside, footer, figcaption {
   outline: 0;
 }
 
+:root{
+
+  /*background for all pages*/
+  --main-background: #000;
+
+  /*background for categories section*/
+  --popular-categories-background:#0578FF;
+
+  /*background colors*/
+  --clear-background: #fff;
+  --color-background:#0578FF;
+  --grey-background:#8d99af;
+  --dark-background:#1e1e1e;
+  --dark-background-blue:#2b2d42;
+
+  /*text colors*/
+  --clear-text:#ffffff;
+  --color-text:#0578FF;
+  --grey-text:#8d99af;
+  --dark-text:#2a2a2a;
+}
+
 /* clear fix */
 .grid:after {
   content: '';
@@ -105,7 +127,7 @@ header, nav, section, article, aside, footer, hgroup {
 html, body {
   font-family: 'Montserrat', sans-serif;
   font-weight: 400;
-  background-color: #fff;
+  background-color: var(--clear-background);
   -ms-text-size-adjust: 100%;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -118,7 +140,7 @@ a {
 h1, h2, h3, h4, h5, h6 {
   margin-top: 0px;
   margin-bottom: 0px;
-  color: #eee;
+  color: var(--clear-text);
 }
 
 ul {
@@ -128,7 +150,7 @@ ul {
 p {
   font-size: 15px;
   line-height: 30px;
-  color: #ffffff;
+  color: var(--clear-text);
 }
 
 img {
@@ -144,23 +166,23 @@ global styles
 */
 html,
 body {
-  background: #000000;
+  background: var(--main-background);
   font-family: 'Montserrat', sans-serif;
 }
 
 ::selection {
-  background: #03a4ed;
-  color: #fff;
+  background: var(--color-background);
+  color: var(--clear-text);
 }
 
 ::-moz-selection {
-  background: #03a4ed;
-  color: #fff;
+  background: var(--color-background);
+  color: var(--clear-text);
 }
 
 .videod
 {
-  align-content: center; size: inherit; width="940"; height="660";
+  align-content: center; size: inherit;
 }
 
 
@@ -188,7 +210,7 @@ body {
   font-size: 35px;
   margin-bottom: 25px;
   text-transform: capitalize;
-  color: #ffffff;
+  color: var(--clear-text);
   font-weight: 700;
   position: relative;
   z-index: 2;
@@ -197,17 +219,17 @@ body {
 
 .section-heading h6 {
   text-transform: uppercase;
-  font-size: 18px;
+  font-size: 80px;
   font-weight: 700;
-  color: #0578FF;
+  color: var(--color-text);
 }
 
 .main-white-button a {
   display: inline-block;
-  background-color: #fff;
+  background-color: var(--clear-background);
   font-size: 15px;
   font-weight: 400;
-  color: #0578FF;
+  color: var(--color-text);
   text-transform: capitalize;
   padding: 12px 25px;
   border-radius: 7px;
@@ -219,7 +241,7 @@ body {
   margin-right: 10px;
   width: 22px;
   height: 22px;
-  background-color: #0578FF;
+  background-color: var(--blue-background);
   color: #fff;
   border-radius: 50%;
   display: inline-block;
@@ -240,7 +262,7 @@ header
 */
 
 .background-header {
-  background-color: #ffffff!important;
+  background-color: var(--clear-background)!important;
   height: 80px!important;
   position: fixed!important;
   top: 0px;
@@ -251,15 +273,15 @@ header
 
 .background-header .logo,
 .background-header .main-nav .nav li a {
-  color: #0578FF!important;
+  color: var(--color-text)!important;
 }
 
 .background-header .main-nav .nav li:hover a {
-  color: #0578FF!important;
+  color: var(--color-text)!important;
 }
 
 .background-header .nav li a.active {
-  color: #0578FF!important;
+  color: var(--color-text)!important;
 }
 /* 
 ---------------------------------------------
@@ -267,7 +289,7 @@ cabecera donde esta la linea
 --------------------------------------------- 
 */
 .header-area {
-  background-color: #ffffff;
+  background-color: var(--clear-background);
   border-bottom: 1px solid #0578FF;
   position: fixed;
   top: 0px;
@@ -331,7 +353,7 @@ cabecera donde esta la linea
 
 .header-area .main-nav .nav li:last-child a ,
 .background-header .main-nav .nav li:last-child a {
-  color: #0578FF !important;
+  color: var(--color-text) !important;
   text-transform: capitalize;
   padding: 0px 20px;
   font-weight: 400;
@@ -344,25 +366,25 @@ cabecera donde esta la linea
 }
 
 .background-header .main-nav .nav li:last-child .main-white-button a {
-  background-color: #0578FF;
-  color: #fff !important;
+  background-color: var(--blue-background);
+  color: var(--clear-text) !important;
 }
 
 .background-header .main-nav .nav li:last-child .main-white-button a i {
-  background-color: #fff;
-  color: #0578FF;
+  background-color: var(--clear-background);
+  color: var(--color-text);
 }
 
 .header-area .main-nav .nav li:last-child a:hover,
 .header-area .main-nav .nav li:last-child a.active {
-  color: #fff !important;
+  color: var(--clear-text) !important;
 }
 
 .header-area .main-nav .nav li a {
   display: block;
   font-weight: 500;
   font-size: 14px;
-  color: #fff;
+  color: var(--clear-text);
   text-transform: uppercase;
   -webkit-transition: all 0.3s ease 0s;
   -moz-transition: all 0.3s ease 0s;
@@ -376,18 +398,18 @@ cabecera donde esta la linea
 
 .header-area .main-nav .nav li:hover a,
 .header-area .main-nav .nav li a.active {
-  color: #0578FF!important;
+  color: var(--color-text)!important;
 }
 
 .background-header .main-nav .nav li:hover a,
 .background-header .main-nav .nav li a.active {
-  color: #0578FF!important;
+  color: var(--color-text)!important;
   opacity: 1;
 }
 
 .header-area .main-nav .nav li:last-child a:hover ,
 .background-header .main-nav .nav li:last-child a:hover {
-  background-color: #0578FF;
+  background-color: var(--color-background);
 }
 
 .header-area .main-nav .nav li.has-sub {
@@ -399,7 +421,7 @@ cabecera donde esta la linea
   font-family: FontAwesome;
   content: "\f107";
   font-size: 12px;
-  color: #fff;
+  color: var(--clear-text);
   position: absolute;
   right: 5px;
   top: 12px;
@@ -432,7 +454,7 @@ cabecera donde esta la linea
   opacity: 1;
   display: block;
   background: #f7f7f7;
-  color: #2a2a2a!important;
+  color: var(--dark-text)!important;
   padding-left: 20px;
   height: 40px;
   line-height: 40px;
@@ -447,7 +469,7 @@ cabecera donde esta la linea
 }
 
 .header-area .main-nav .nav li.has-sub ul li a:hover {
-  background: #fff;
+  background: var(--clear-text);
   color: #f5a425!important;
   padding-left: 25px;
 }
@@ -488,7 +510,7 @@ cabecera donde esta la linea
   -o-transition: all 0.4s;
   -webkit-transition: all 0.4s;
   transition: all 0.4s;
-  background-color: #1e1e1e;
+  background-color: var(--dark-background);
   display: block;
   position: absolute;
   width: 30px;
@@ -499,7 +521,7 @@ cabecera donde esta la linea
 .background-header .main-nav .menu-trigger span,
 .background-header .main-nav .menu-trigger span:before,
 .background-header .main-nav .menu-trigger span:after {
-  background-color: #1e1e1e;
+  background-color: var(--dark-background);
 }
 
 .header-area .main-nav .menu-trigger span:before,
@@ -508,7 +530,7 @@ cabecera donde esta la linea
   -o-transition: all 0.4s;
   -webkit-transition: all 0.4s;
   transition: all 0.4s;
-  background-color: #1e1e1e;
+  background-color: var(--dark-background);
   display: block;
   position: absolute;
   width: 30px;
@@ -519,7 +541,7 @@ cabecera donde esta la linea
 
 .background-header .main-nav .menu-trigger span:before,
 .background-header .main-nav .menu-trigger span:after {
-  background-color: #1e1e1e;
+  background-color: var(--dark-background);
 }
 
 .header-area .main-nav .menu-trigger span:before,
@@ -560,11 +582,11 @@ cabecera donde esta la linea
   -ms-transform: translateY(6px) translateX(1px) rotate(45deg);
   -webkit-transform: translateY(6px) translateX(1px) rotate(45deg);
   transform: translateY(6px) translateX(1px) rotate(45deg);
-  background-color: #1e1e1e;
+  background-color: var(--dark-background);
 }
 
 .background-header .main-nav .menu-trigger.active span:before {
-  background-color: #1e1e1e;
+  background-color: var(--dark-background);
 }
 
 .header-area .main-nav .menu-trigger.active span:after {
@@ -572,11 +594,11 @@ cabecera donde esta la linea
   -ms-transform: translateY(-6px) translateX(1px) rotate(-45deg);
   -webkit-transform: translateY(-6px) translateX(1px) rotate(-45deg);
   transform: translateY(-6px) translateX(1px) rotate(-45deg);
-  background-color: #1e1e1e;
+  background-color: var(--dark-background);
 }
 
 .background-header .main-nav .menu-trigger.active span:after {
-  background-color: #1e1e1e;
+  background-color: var(--dark-background);
 }
 
 .header-area.header-sticky {
@@ -588,7 +610,7 @@ cabecera donde esta la linea
 }
 
 .header-area.header-sticky .nav li a.active {
-  color: #8d99af;
+  color: var(--grey-text);
 }
 
 @media (max-width: 1200px) {
@@ -621,7 +643,7 @@ cabecera donde esta la linea
   }
   .header-area.header-sticky .nav li a:hover,
   .header-area.header-sticky .nav li a.active {
-    color: #8d99af!important;
+    color: var(--grey-text)!important;
     opacity: 1;
   }
   .header-area.header-sticky .nav li.search-icon a {
@@ -667,7 +689,7 @@ cabecera donde esta la linea
   }
   .header-area .main-nav .nav li {
     width: 100%;
-    background: #fff;
+    background: var(--clear-background);
     border-bottom: 1px solid #e7e7e7;
     padding-left: 0px !important;
     padding-right: 0px !important;
@@ -678,11 +700,11 @@ cabecera donde esta la linea
     padding: 0px !important;
     border: none !important;
     background: #f7f7f7 !important;
-    color: #ffffff !important;
+    color: var(--clear-text) !important; 
   }
   .header-area .main-nav .nav li a:hover {
     background: #eee !important;
-    color: #8d99af!important;
+    color: var(--grey-text)!important;
   }
   .header-area .main-nav .nav li.has-sub ul.sub-menu {
     position: relative;
@@ -734,7 +756,7 @@ Banner Style
 .main-banner {
   background-repeat: no-repeat;
   background-position: center center;
-  background-size: cover;
+  background-size: 95%;
   background-image: url(../images/banner-bg.jpg);
   padding: 290px 0px 180px 0px;
   position: relative;
@@ -746,14 +768,14 @@ Banner Style
 }
 
 .main-banner .top-text h6 {
-  color: #fff;
+  color: var(--clear-text);
   font-size: 15px;
   font-weight: 500;
   text-transform: uppercase;
 }
 
 .main-banner .top-text h2 {
-  color: #fff;
+  color: var(--clear-text);
   font-size: 45px;
   font-weight: 800;
   text-transform: capitalize;
@@ -774,7 +796,7 @@ Banner Style
 }
 
 .main-banner ul.categories li a {
-  color: #fff;
+  color: var(--clear-text);
   text-align: center;
   font-size: 15px;
   margin-top: 15px;
@@ -788,13 +810,13 @@ Banner Style
   border-radius: 50%;
   text-align: center;
   line-height: 62px;
-  color: #0578FF;
-  background-color: #fff;
+  color: var(--color-text);
+  background-color: var(--clear-background);
   transition: all .5s;
 }
 
 .main-banner ul.categories li a:hover .icon {
-  background-color: #0578FF;
+  background-color: var(--color-background);
 }
 
 .main-banner ul.categories li .icon img {
@@ -802,7 +824,7 @@ Banner Style
 }
 
 form#search-form {
-  background-color: #fff;
+  background-color: var(--clear-background);
   padding: 0px 0px 0px 30px;
   width: 100%;
   border-radius: 7px;
@@ -816,7 +838,7 @@ form#search-form input {
   height: 36px;
   background-color: transparent;
   border: none;
-  color: #2a2a2a;
+  color: var(--dark-text);
   font-size: 15px;
   outline: none;
 }
@@ -832,17 +854,17 @@ form#search-form input.searchText {
 }
 
 form#search-form input::placeholder {
-  color: #2a2a2a;
+  color: var(--dark-text);
   font-size: 15px;
 }
 
 form#search-form button {
   width: 100%;
   height: 100%;
-  background-color: #0578FF;
+  background-color: var(--color-background);
   border: none;
   padding: 15px;
-  color: #fff;
+  color: var(--clear-text);
   font-size: 15px;
   border-top-right-radius: 7px;
   border-bottom-right-radius: 7px;
@@ -851,7 +873,7 @@ form#search-form button {
 form#search-form button i {
   width: 40px;
   height: 40px;
-  background-color: #fff;
+  background-color: var(--clear-background);
   border-radius: 50%;
   color: #000000;
   display: inline-block;
@@ -879,7 +901,7 @@ Popular Categories
 
 .popular-categories .naccs {
   position: relative;
-  background-color: #0578FF;
+  background-color: var(--popular-categories-background);
   border-radius: 7px;
 }
 
@@ -890,8 +912,8 @@ Popular Categories
   border-radius: 50%;
   text-align: center;
   line-height: 62px;
-  color: #8d99af;
-  background-color: #fff;
+  color: var(--grey-text);
+  background-color: var(--clear-background);
   margin-right: 15px;
 }
 
@@ -909,7 +931,7 @@ Popular Categories
 }
 
 .popular-categories .naccs .menu div {
-  color: #fff;
+  color: var(--clear-text);
   font-size: 15px;
   background-color: #000000;
   margin-bottom: 1px;
@@ -924,7 +946,7 @@ Popular Categories
 
 .popular-categories .naccs .menu div.active,
 .popular-categories .naccs .menu div.active .thumb {
-  background-color: #0578FF;
+  background-color: var(--color-background);
 }
 
 .popular-categories ul.nacc {
@@ -961,7 +983,7 @@ Popular Categories
 }
 
 .popular-categories .nacc .thumb .left-text h4 {
-  color: #fff;
+  color: var(--clear-text);
   font-size: 20px;
   font-weight: 700;
   line-height: 35px;
@@ -969,7 +991,7 @@ Popular Categories
 }
 
 .popular-categories .nacc .thumb .left-text p {
-  color: #fff;
+  color: var(--clear-text);
   margin-bottom: 30px;
 }
 
@@ -1009,11 +1031,11 @@ Recent Listing
 
 .recent-listing .item .listing-item {
   display: inline-flex;
-  background-color: #ffffff;
+  background-color: var(--clear-background);
   border-radius: 0 px;
   width: 100%;
   position: relative;
-  margin left: 30px;
+  margin-left: 30px;
   margin-bottom: 30px;
 }
 
@@ -1051,7 +1073,7 @@ Recent Listing
 
 .recent-listing .item .right-content h4 {
   font-size: 20px;
-  color: #0578FF;
+  color: var(--color-text);
   font-weight: 700;
   margin-bottom: 20px;
 }
@@ -1059,11 +1081,11 @@ Recent Listing
 .recent-listing .item .right-content h6 {
   font-size: 15px;
   font-weight: 500;
-  color: #8d99af;
+  color: var(--grey-text);
 }
 
 .recent-listing .item .right-content span.price {
-  color: #2a2a2a;
+  color: var(--dark-text);
   font-size: 15px;
   margin-top: 30px;
   display: block;
@@ -1073,7 +1095,7 @@ Recent Listing
 .recent-listing .item .right-content span.price .icon {
   width: 30px;
   height: 30px;
-  background-color: #0578FF;
+  background-color: var(--color-background);
   border-radius: 50%;
   text-align: center;
   line-height: 28px;
@@ -1091,12 +1113,12 @@ Recent Listing
   display: block;
   margin-bottom: 30px;
   font-size: 15px;
-  color: #0578FF;
+  color: var(--color-text);
 }
 
 .recent-listing .item .right-content span.details em {
   font-style: normal;
-  color: #2a2a2a;
+  color: var(--dark-text);
 }
 
 .recent-listing .item .right-content ul.info li {
@@ -1130,7 +1152,7 @@ Recent Listing
 .recent-listing .owl-dots .owl-dot {
   width: 10px;
   height: 10px;
-  background-color: #8d99af;
+  background-color: var(--grey-background);
   border-radius: 50%;
   margin: 0px 5px;
   transition: all .3s;
@@ -1157,13 +1179,13 @@ footer {
 footer h4 {
   font-size: 20px;
   font-weight: 700;
-  color: #0578FF;
+  color: var(--color-text);
   margin-bottom: 30px;
 }
 
 footer p,
 footer a {
-  color: #ffffff;
+  color: var(--clear-text);
 }
 
 footer .logo img {
@@ -1186,7 +1208,7 @@ footer .helpful-links ul li a {
 }
 
 footer .helpful-links ul li a:hover {
-  color: #8d99af;
+  color: var(--grey-text);
   border-bottom: 1px solid #8d99af;
 }
 
@@ -1199,7 +1221,7 @@ footer .contact-us a {
 }
 
 footer .contact-us a:hover {
-  color: #8d99af;
+  color: var(--grey-text);
   border-bottom: 1px solid #8d99af;
 }
 
@@ -1249,7 +1271,7 @@ form#contact input {
   outline: none;
   font-size: 15px;
   font-weight: 300;
-  color: #8d99af;
+  color: var(--grey-text);
   padding: 0px 15px;
   margin-bottom: 30px;
 }
@@ -1275,14 +1297,14 @@ form#contact input[type=checkbox] {
 }
 
 form#contact span {
-  color: #8d99af;
+  color: var(--grey-text);
   font-size: 14px;
   font-weight: 500;
   margin-left: 8px;
 }
 
 form#contact input::placeholder {
-  color: #8d99af;
+  color: var(--grey-text);
   font-weight: 500;
 }
 
@@ -1300,23 +1322,23 @@ form#contact textarea {
   outline: none;
   font-size: 15px;
   font-weight: 300;
-  color: #8d99af;
+  color: var(--grey-text);
   padding: 15px;
   margin-bottom: 30px;
 }
 
 form#contact textarea::placeholder {
-  color: #8d99af;
+  color: var(--grey-text);
   font-weight: 500;
 }
 
 form#contact button {
   margin-bottom: -15px;
   display: inline-block;
-  background-color: #8d99af;
+  background-color: var(--grey-background);
   font-size: 15px;
   font-weight: 400;
-  color: #fff;
+  color: var(--clear-text);
   text-transform: capitalize;
   padding: 12px 25px;
   border-radius: 7px;
@@ -1330,8 +1352,8 @@ form#contact button i {
   margin-right: 10px;
   width: 24px;
   height: 24px;
-  background-color: #2b2d42;
-  color: #fff;
+  background-color: var(--dark-background-blue);
+  color: var(--clear-text);
   border-radius: 50%;
   display: inline-block;
   text-align: center;
@@ -1340,8 +1362,8 @@ form#contact button i {
 }
 
 form#contact button:hover {
-  background-color: #2b2d42;
-  color: #fff;
+  background-color: var(--dark-background-blue);
+  color: var(--clear-text);
 }
 
 
@@ -1366,14 +1388,14 @@ Page Heading
 }
 
 .page-heading .top-text h6 {
-  color: #fff;
+  color: var(--clear-text);
   font-size: 15px;
   font-weight: 500;
   text-transform: uppercase;
 }
 
 .page-heading .top-text h2 {
-  color: #fff;
+  color: var(--clear-text);
   line-height: 70px;
   font-size: 45px;
   font-weight: 800;
@@ -1393,6 +1415,8 @@ Category Post
   overflow: hidden;
   margin-top: 0px;
   margin-bottom: 120px;
+  display: flex;
+  align-items: center; /* Vertically align the icon */
 }
 
 .category-post .naccs {
@@ -1401,23 +1425,23 @@ Category Post
 }
 
 .category-post .icon {
-  display: inline-block;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
   width: 66px;
   height: 66px;
   border-radius: 50%;
   text-align: center;
-  line-height: 62px;
-  color: #8d99af;
-  background-color: #fff;
+  color: var(--grey-text);
+  background-color: var(--clear-background);
   margin-right: 15px;
-  float: left;
 }
 
 .category-post .naccs .menu div h4 {
   position: absolute;
   left: 81px;
   top: 50%;
-  color: #fff;
+  color: var(--clear-text);
   transform: translateY(-50%);
   font-size: 15px;
   font-weight: 400;
@@ -1438,16 +1462,21 @@ Category Post
   border-bottom-right-radius: 7px;
 }
 
+.category-post .naccs .menu {
+  display: flex;
+}
+
 .category-post .naccs .menu div {
-  color: #fff;
-  margin: 0px;
+  color: var(--clear-text);
+  margin: 0;
   width: 20%;
   font-size: 10px;
-  background-color: #8d99af;
+  background-color: var(--grey-background);
   height: 132px;
   line-height: 132px;
-  display: inline-block;
-  float: left;
+  display: flex; /* Make it a flex container */
+  align-items: center; /* Center content vertically */
+  justify-content: flex-start; /* Align text to the left */
   text-align: left;
   cursor: pointer;
   position: relative;
@@ -1462,7 +1491,7 @@ Category Post
 
 .category-post .naccs .menu div.active,
 .category-post .naccs .menu div.active .thumb {
-  background-color: #2b2d42;
+  background-color: var(--dark-background-blue);
 }
 
 .category-post ul.nacc {
@@ -1495,7 +1524,7 @@ Category Post
 }
 
 .category-post .nacc .thumb h4 {
-  color: #0578FF;
+  color: var(--color-text);
   font-size: 20px;
   font-weight: 700;
   line-height: 35px;
@@ -1508,13 +1537,13 @@ Category Post
 }
 
 .category-post .nacc .thumb .main-white-button a {
-  background-color: #8d99af;
-  color: #fff;
+  background-color: var(--grey-background);
+  color: var(--clear-text);
 }
 
 .category-post .nacc .thumb .main-white-button a i {
-  background-color: #fff;
-  color: #8d99af;
+  background-color: var(--clear-background);
+  color: var(--grey-text);
 }
 
 .category-post .top-content {
@@ -1535,20 +1564,21 @@ Category Post
 }
 
 .category-post .top-content .top-icon {
-  background-color: #2b2d42;
+  background-color: var(--dark-background-blue);
   width: 250px;
   height: 132px;
   border-radius: 7px;
   position: relative;
   padding: 30px;
-  display: inline-block;
+  display: flex;
+  align-items: center; /* Vertically align the icon */
 }
 
 .category-post .top-content .top-icon h4 {
   position: absolute;
   left: 30px;
   top: 50%;
-  color: #fff;
+  color: var(--clear-text);
   transform: translateY(-50%);
   font-size: 15px;
   font-weight: 400;
@@ -1557,17 +1587,20 @@ Category Post
 }
 
 .category-post .top-content .top-icon .icon {
-  display: inline-block;
+  display: inline-flex; /* This ensures the icon is treated as a flex container */
+  justify-content: center;
+  align-items: center;
   width: 66px;
   height: 66px;
   border-radius: 50%;
-  text-align: center;
-  line-height: 62px;
-  color: #8d99af;
-  background-color: #fff;
+  color: var(--grey-text);
+  background-color: var(--clear-background);
   margin-right: 15px;
-  float: left;
-  left: 0;
+  text-align: center;
+  line-height: 62px; /* You can remove this if using Flexbox for centering */
+  cursor: pointer; /* Optional: adds pointer cursor to indicate clickability */
+  position: relative; /* If you're planning to use absolute positioning inside */
+  transition: 1s all cubic-bezier(0.075, 0.82, 0.165, 1); /* Optional: for transitions */
 }
 
 .category-post .nacc .thumb .text-icon img {
@@ -1577,7 +1610,7 @@ Category Post
 
 .category-post .nacc .thumb span.list-item {
   font-size: 15px;
-  color: #0578FF;
+  color: var(--color-text);
   font-weight: 500;
   line-height: 30px;
 }
@@ -1612,8 +1645,8 @@ Listing Page
   border-radius: 50%;
   text-align: center;
   line-height: 62px;
-  color: #8d99af;
-  background-color: #fff;
+  color: var(--grey-text);
+  background-color: var(--clear-background);
   margin-right: 15px;
 }
 
@@ -1631,10 +1664,10 @@ Listing Page
 }
 
 .listing-page .naccs .menu div {
-  color: #fff;
+  color: vasr(--clear-text);
   font-size: 15px;
   border-radius: 7px;
-  background-color: #8d99af;
+  background-color: var(--grey-background);
   margin-bottom: 30px;
   height: 126px;
   text-align: left;
@@ -1647,7 +1680,7 @@ Listing Page
 
 .listing-page .naccs .menu div.active,
 .listing-page .naccs .menu div.active .thumb {
-  background-color: #2b2d42;
+  background-color: var(--dark-background-blue);
 }
 
 .listing-page ul.nacc {
@@ -1736,7 +1769,7 @@ Listing Page
 
 .listing-page .item .right-content h4 {
   font-size: 20px;
-  color: #2a2a2a;
+  color: var(--dark-text);
   font-weight: 700;
   margin-bottom: 20px;
 }
@@ -1744,11 +1777,11 @@ Listing Page
 .listing-page .item .right-content h6 {
   font-size: 15px;
   font-weight: 500;
-  color: #0578FF;
+  color:var(--color-text);
 }
 
 .listing-page .item .right-content span.price {
-  color: #2a2a2a;
+  color: var(--dark-text);
   font-size: 15px;
   margin-top: 30px;
   display: block;
@@ -1758,7 +1791,7 @@ Listing Page
 .listing-page .item .right-content span.price .icon {
   width: 30px;
   height: 30px;
-  background-color: #8d99af;
+  background-color: var(--grey-background);
   border-radius: 50%;
   text-align: center;
   line-height: 28px;
@@ -1776,12 +1809,12 @@ Listing Page
   display: block;
   margin-bottom: 30px;
   font-size: 15px;
-  color: #8d99af;
+  color: var(--grey-text);
 }
 
 .listing-page .item .right-content span.details em {
   font-style: normal;
-  color: #2a2a2a;
+  color: var(--dark-text);
 }
 
 .listing-page .item .right-content span.info {
@@ -1802,7 +1835,7 @@ Listing Page
 .listing-page .owl-dots .owl-dot {
   width: 10px;
   height: 10px;
-  background-color: #8d99af;
+  background-color: var(--grey-background);
   border-radius: 50%;
   margin: 0px 5px;
   transition: all .3s;
@@ -1827,7 +1860,7 @@ Pre Loader
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: #fff;
+    background-color: var(--clear-text);
     display: -webkit-box;
     display: flex;
     -webkit-box-align: center;
@@ -1879,7 +1912,7 @@ Pre Loader
     position: relative;
     width: 142px;
     height: 40px;
-    background: #fff;
+    background: var(--clear-background);
 }
 
 .preloader-inner .dot {
@@ -1888,7 +1921,7 @@ Pre Loader
     height: 16px;
     top: 12px;
     left: 15px;
-    background: #8d99af;
+    background: var(--grey-background);
     border-radius: 50%;
     -webkit-transform: translateX(0);
     transform: translateX(0);
@@ -1911,7 +1944,7 @@ Pre Loader
     width: 16px;
     height: 16px;
     margin-left: 16px;
-    background: #8d99af;
+    background: var(--grey-background);
     border-radius: 50%;
 }
 
